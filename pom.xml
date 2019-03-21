@@ -7,7 +7,7 @@
     <groupId>se.lars</groupId>
     <artifactId>vertx-gzip</artifactId>
     <version>1.0-SNAPSHOT</version>
-    
+
     <properties>
         <java.version>11</java.version>
         <vertx.version>3.6.3</vertx.version>
@@ -20,6 +20,12 @@
             <groupId>io.vertx</groupId>
             <artifactId>vertx-core</artifactId>
             <version>3.6.3</version>
+        </dependency>
+        <dependency>
+            <groupId>io.netty</groupId>
+            <artifactId>netty-transport-native-epoll</artifactId>
+            <version>4.1.30.Final</version>
+            <classifier>linux-x86_64</classifier>
         </dependency>
         <dependency>
             <groupId>ch.qos.logback</groupId>

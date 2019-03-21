@@ -47,12 +47,15 @@ public class NetServerGzipVerticle extends AbstractVerticle {
                 // add gzip to pipeline
                 pipeline.addLast(ZlibCodecFactory.newZlibEncoder(ZlibWrapper.GZIP));
                 pipeline.addLast(ZlibCodecFactory.newZlibDecoder(ZlibWrapper.GZIP));
+                // need to add inbound channel handler to read and forward...
                 vertx.deployVerticle(new NetClientGzipVerticle(ch));
             }
         });
         
         return bootstrap;
     }
+
+
 
 
 }
